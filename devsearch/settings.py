@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@6&^x=k9i--28@=5pc%d=73&6wtm3&ywh_6#g*)5-x85ucnc9$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['developersearch.herokuapp.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['developersearch.herokuapp.com', '127.0.0.1:8000', '127.0.0.1']
 
 
 # Application definition
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'devsearch.wsgi.application'
+# WSGI_APPLICATION = 'devsearch.wsgi.application'
 
 
 # Database
@@ -130,6 +130,7 @@ EMAIL_HOST_PASSWORD = ''
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 STATICFILES_DIRS = [
@@ -137,6 +138,8 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
