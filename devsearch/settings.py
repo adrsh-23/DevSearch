@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['developersearch.herokuapp.com', '127.0.0.1:8000', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,8 +138,8 @@ STATICFILES_DIRS = [
     BASE_DIR/'static',
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 
 # Default primary key field type
