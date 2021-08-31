@@ -1,0 +1,15 @@
+{% load static %}
+{% include 'main.html' %}
+<main class="formPage my-xl">
+	<div class="content-box">
+		<div class="formWrapper">
+			<form class="form" method="POST" action=""%}>
+				{% csrf_token %}
+				<p> Are you sure you want to delete "{{object}}"</p>
+				<a class="btn btn--sub btn--lg  my-md" href="{{request.GET.next}}">Go back</a>
+				<input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" placeholder="Confirm"/>
+			</form>
+
+		</div>
+	</div>
+</main>
