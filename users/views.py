@@ -28,7 +28,7 @@ def login_page(request):
 		else:
 			messages.error(request,'Username/Password is incorrect')
 
-	return render(request,"users/login_register.html")
+	return render(request,"users/login.html")
 
 def register_user(request):
 	form = CustomUserCreationForm()
